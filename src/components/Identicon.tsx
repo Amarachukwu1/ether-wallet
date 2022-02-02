@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import Jazzicon from '@metamask/jazzicon';
 import { useEthers } from '@usedapp/core';
 import { useEffect, useRef } from 'react';
 
