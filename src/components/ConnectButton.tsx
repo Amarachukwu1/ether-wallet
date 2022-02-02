@@ -8,10 +8,7 @@ export default function ConnectButton({ handleOpenModal }: any) {
 	const { activateBrowserWallet, account } = useEthers();
 	const etherBalance = useEtherBalance(account);
 	const provider = new WalletConnectProvider({
-          infuraId: "7e792748b1ee47c39ee4593dcf72f518",
-        });
-
-        await provider.enable();
+          infuraId: "7e792748b1ee47c39ee4593dcf72f518";
 	
 	function handleConnectWallet() {
 		activateBrowserWallet();
