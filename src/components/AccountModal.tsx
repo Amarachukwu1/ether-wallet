@@ -16,8 +16,10 @@ import {
 import { useEthers, useTransactions } from '@usedapp/core';
 import { useEffect, useState } from 'react';
 import Identicon from './Identicon';
+import { providers } from "ethers";
 
 export default function AccountModal({ isOpen, onClose }: any) {
+	const web3Provider = new providers.Web3Provider(provider);
 	const { account, deactivate } = useEthers();
 	const [isCopied, setIsCopied] = useState(false);
 	const { transactions } = useTransactions();
