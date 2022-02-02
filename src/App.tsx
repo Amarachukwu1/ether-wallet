@@ -28,7 +28,7 @@ function App() {
 				}}
 			>
 				<AlertIcon />
-				Use Rinkby Network to view wallet on etherscan!
+				Use Ethereum Network to view wallet on etherscan!
 			</Alert>
 			<Layout>
 				<Heading as='h1' size='xl' color='white' textAlign='center'>
