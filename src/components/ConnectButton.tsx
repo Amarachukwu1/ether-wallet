@@ -2,11 +2,17 @@ import { Box, Button, Text } from '@chakra-ui/react';
 import { formatEther } from '@ethersproject/units';
 import { useEtherBalance, useEthers } from '@usedapp/core';
 import Identicon from './Identicon';
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 export default function ConnectButton({ handleOpenModal }: any) {
 	const { activateBrowserWallet, account } = useEthers();
 	const etherBalance = useEtherBalance(account);
+	const provider = new WalletConnectProvider({
+          infuraId: "7e792748b1ee47c39ee4593dcf72f518",
+        });
 
+        await provider.enable();
+	
 	function handleConnectWallet() {
 		activateBrowserWallet();
 	}
@@ -52,6 +58,6 @@ export default function ConnectButton({ handleOpenModal }: any) {
 			</Button>
 		</Box>
 	) : (
-		<Button onClick={handleConnectWallet}>Connect with MetaMask</Button>
+		<Button onClick={handleConnectWallet}>Connect with WalletConnect</Button>
 	);
 }
