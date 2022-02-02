@@ -84,7 +84,7 @@ export default function AccountModal({ isOpen, onClose }: any) {
 							mb={3}
 						>
 							<Text color='gray.400' fontSize='sm'>
-								Connected with MetaMask
+								Connected with WalletConnect
 							</Text>
 							<Button
 								variant='outline'
@@ -154,7 +154,7 @@ export default function AccountModal({ isOpen, onClose }: any) {
 								fontSize='sm'
 								display='flex'
 								alignItems='center'
-								href={`https://rinkeby.etherscan.io/address/${account}`}
+								href={`https://etherscan.io/address/${account}`}
 								isExternal
 								color='gray.400'
 								ml={6}
